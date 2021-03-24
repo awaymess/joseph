@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="ParticlesMaterial" id=1]
+flag_disable_z = true
+spread = 100.0
+gravity = Vector3( -90, -70, 0 )
+initial_velocity = 25.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+tangential_accel = 100.0
+tangential_accel_random = 0.64
+scale = 3.0
+
+[node name="effect" type="Node2D"]
+
+[node name="Particles2D" type="Particles2D" parent="."]
+modulate = Color( 0.584314, 0, 0.85098, 1 )
+position = Vector2( 64.1184, 2.77584 )
+lifetime = 3.0
+speed_scale = 3.0
+process_material = SubResource( 1 )

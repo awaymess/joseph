@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/rain.ogg-1ecf2b6dd66df0578e454c5029131f80.oggstr"
+
+[deps]
+
+source_file="res://sprites/rain.ogg"
+dest_files=[ "res://.import/rain.ogg-1ecf2b6dd66df0578e454c5029131f80.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

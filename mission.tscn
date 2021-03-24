@@ -1,0 +1,224 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://mission.gd" type="Script" id=1]
+[ext_resource path="res://art/tumblr_owr6ebdnBk1qke11oo1_1280.png" type="Texture" id=2]
+[ext_resource path="res://art/map2.png" type="Texture" id=3]
+[ext_resource path="res://sound/sfx_menu_move4.wav" type="AudioStream" id=4]
+[ext_resource path="res://sound/song_fullconfession.ogg" type="AudioStream" id=5]
+[ext_resource path="res://art/black80.png" type="Texture" id=6]
+[ext_resource path="res://effect.tscn" type="PackedScene" id=7]
+[ext_resource path="res://fonts/ZF#2ndPixelus.ttf" type="DynamicFontData" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 120
+font_data = ExtResource( 8 )
+
+[node name="credit" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="tumblr_owr6ebdnBk1qke11oo1_1280" type="Sprite" parent="."]
+position = Vector2( 639.624, 374.548 )
+scale = Vector2( 1.02646, 1.02646 )
+texture = ExtResource( 2 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2( 1120.19, 7.93337 )
+scale = Vector2( 0.750323, 0.380552 )
+normal = ExtResource( 3 )
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
+position = Vector2( 518.214, 197.312 )
+scale = Vector2( 1.09273, 0.271685 )
+normal = ExtResource( 3 )
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="."]
+position = Vector2( 519.755, 261.48 )
+scale = Vector2( 1.09273, 0.271685 )
+normal = ExtResource( 3 )
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="."]
+position = Vector2( 525.401, 326.674 )
+scale = Vector2( 1.09273, 0.271685 )
+normal = ExtResource( 3 )
+
+[node name="TouchScreenButton5" type="TouchScreenButton" parent="."]
+position = Vector2( 528.995, 392.896 )
+scale = Vector2( 1.09273, 0.271685 )
+normal = ExtResource( 3 )
+
+[node name="TouchScreenButton6" type="TouchScreenButton" parent="."]
+position = Vector2( 536.695, 460.657 )
+scale = Vector2( 1.09273, 0.271685 )
+normal = ExtResource( 3 )
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
+[node name="black80" type="Sprite" parent="."]
+position = Vector2( 645.726, 364.125 )
+texture = ExtResource( 6 )
+
+[node name="effect" parent="." instance=ExtResource( 7 )]
+editor/display_folded = true
+position = Vector2( 1238.9, 740.496 )
+scale = Vector2( 0.53897, 0.53897 )
+
+[node name="effect8" parent="effect" instance=ExtResource( 7 )]
+position = Vector2( -1123.13, 32.4604 )
+
+[node name="effect2" parent="effect" instance=ExtResource( 7 )]
+position = Vector2( 144.99, -235.88 )
+
+[node name="effect7" parent="effect" instance=ExtResource( 7 )]
+position = Vector2( -865.613, 60.5931 )
+
+[node name="effect3" parent="effect" instance=ExtResource( 7 )]
+position = Vector2( -192.599, 15.1481 )
+
+[node name="effect9" parent="effect" instance=ExtResource( 7 )]
+position = Vector2( -1315.73, 47.6086 )
+
+[node name="effect4" parent="effect" instance=ExtResource( 7 )]
+position = Vector2( -376.541, 54.101 )
+
+[node name="effect6" parent="effect" instance=ExtResource( 7 )]
+position = Vector2( -1499.67, 86.5614 )
+
+[node name="effect5" parent="effect" instance=ExtResource( 7 )]
+position = Vector2( -577.797, 28.1324 )
+
+[node name="effect10" parent="effect" instance=ExtResource( 7 )]
+position = Vector2( -1700.93, 60.5928 )
+
+[node name="effect2" parent="." instance=ExtResource( 7 )]
+editor/display_folded = true
+position = Vector2( 79.7553, -8.65103 )
+rotation = 3.10752
+scale = Vector2( 0.53897, 0.53897 )
+
+[node name="effect8" parent="effect2" instance=ExtResource( 7 )]
+position = Vector2( -1123.13, 32.4604 )
+
+[node name="effect2" parent="effect2" instance=ExtResource( 7 )]
+position = Vector2( 144.99, -235.88 )
+
+[node name="effect7" parent="effect2" instance=ExtResource( 7 )]
+position = Vector2( -865.613, 60.5931 )
+
+[node name="effect3" parent="effect2" instance=ExtResource( 7 )]
+position = Vector2( -192.599, 15.1481 )
+
+[node name="effect9" parent="effect2" instance=ExtResource( 7 )]
+position = Vector2( -1315.73, 47.6086 )
+
+[node name="effect4" parent="effect2" instance=ExtResource( 7 )]
+position = Vector2( -376.541, 54.101 )
+
+[node name="effect6" parent="effect2" instance=ExtResource( 7 )]
+position = Vector2( -1499.67, 86.5614 )
+
+[node name="effect5" parent="effect2" instance=ExtResource( 7 )]
+position = Vector2( -577.797, 28.1324 )
+
+[node name="effect10" parent="effect2" instance=ExtResource( 7 )]
+position = Vector2( -1700.93, 60.5928 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 539.042
+margin_top = 96.1337
+margin_right = 871.042
+margin_bottom = 211.134
+rect_scale = Vector2( 0.770545, 0.770545 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0.00392157, 0.572549, 0.466667, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+text = "noissim"
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 1119.92
+margin_top = -8.91019
+margin_right = 1415.92
+margin_bottom = 106.09
+rect_scale = Vector2( 0.770545, 0.770545 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0588235, 0.0588235, 0.0588235, 1 )
+custom_colors/font_color_shadow = Color( 1, 0.913725, 0, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+text = "exit"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 721.474
+margin_top = 183.791
+margin_right = 1944.47
+margin_bottom = 298.791
+rect_scale = Vector2( -0.539, 0.539 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+text = "mission 1"
+percent_visible = -0.125
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 718.533
+margin_top = 249.44
+margin_right = 2035.53
+margin_bottom = 364.44
+rect_scale = Vector2( -0.539, 0.539 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 1, 0, 0, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+text = "missin 2"
+percent_visible = -0.142857
+
+[node name="Label7" type="Label" parent="."]
+margin_left = 729.417
+margin_top = 374.594
+margin_right = 2046.42
+margin_bottom = 489.594
+rect_scale = Vector2( -0.539, 0.539 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 1, 0, 0, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+text = "missin 4"
+percent_visible = -0.142857
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 724.832
+margin_top = 313.073
+margin_right = 2207.83
+margin_bottom = 428.073
+rect_scale = Vector2( -0.539, 0.53897 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+text = "missin 3"
+percent_visible = -0.142857
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 731.634
+margin_top = 447.75
+margin_right = 2214.63
+margin_bottom = 562.75
+rect_scale = Vector2( -0.539, 0.53897 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 3
+custom_constants/shadow_offset_y = 3
+text = "missin 5"
+percent_visible = -0.142857
+[connection signal="pressed" from="TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]
+[connection signal="pressed" from="TouchScreenButton2" to="." method="_on_TouchScreenButton2_pressed"]
+[connection signal="pressed" from="TouchScreenButton3" to="." method="_on_TouchScreenButton3_pressed"]
+[connection signal="pressed" from="TouchScreenButton4" to="." method="_on_TouchScreenButton4_pressed"]
+[connection signal="pressed" from="TouchScreenButton5" to="." method="_on_TouchScreenButton5_pressed"]
+[connection signal="pressed" from="TouchScreenButton6" to="." method="_on_TouchScreenButton6_pressed"]

@@ -1,0 +1,185 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://menu.gd" type="Script" id=1]
+[ext_resource path="res://art/Menu/submenu1.jpg" type="Texture" id=2]
+[ext_resource path="res://art/m4.png" type="Texture" id=3]
+[ext_resource path="res://art/m5.png" type="Texture" id=4]
+[ext_resource path="res://art/m6.png" type="Texture" id=5]
+[ext_resource path="res://art/m7.png" type="Texture" id=6]
+[ext_resource path="res://art/m8.png" type="Texture" id=7]
+[ext_resource path="res://art/m9.png" type="Texture" id=8]
+[ext_resource path="res://art/m11.png" type="Texture" id=9]
+[ext_resource path="res://art/m13.png" type="Texture" id=10]
+[ext_resource path="res://art/m14.png" type="Texture" id=11]
+[ext_resource path="res://art/m15.png" type="Texture" id=12]
+[ext_resource path="res://art/m20.png" type="Texture" id=13]
+[ext_resource path="res://art/m21.png" type="Texture" id=14]
+[ext_resource path="res://art/m22.png" type="Texture" id=15]
+[ext_resource path="res://art/m23.png" type="Texture" id=16]
+[ext_resource path="res://art/m24.png" type="Texture" id=17]
+[ext_resource path="res://art/m26.png" type="Texture" id=18]
+[ext_resource path="res://art/m27.png" type="Texture" id=19]
+[ext_resource path="res://art/m28.png" type="Texture" id=20]
+[ext_resource path="res://art/map3.png" type="Texture" id=21]
+[ext_resource path="res://sound/sfx_menu_move4.wav" type="AudioStream" id=22]
+[ext_resource path="res://sound/song_graveyard.ogg" type="AudioStream" id=23]
+[ext_resource path="res://effect.tscn" type="PackedScene" id=24]
+[ext_resource path="res://fonts/ZF#2ndPixelus.ttf" type="DynamicFontData" id=25]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+size = 120
+font_data = ExtResource( 25 )
+
+[node name="menu" type="Node"]
+script = ExtResource( 1 )
+
+[node name="submenu1" type="Sprite" parent="."]
+position = Vector2( 639.213, 359.483 )
+texture = ExtResource( 2 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 699.235, 356.794 )
+scale = Vector2( 1.81428, 2.26969 )
+frames = SubResource( 1 )
+animation = "New Anim"
+frame = 16
+speed_scale = 2.0
+playing = true
+
+[node name="HUD_TOUCH_MENU" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="touch_play" type="TouchScreenButton" parent="HUD_TOUCH_MENU"]
+modulate = Color( 1, 1, 1, 0.392157 )
+position = Vector2( 525.505, 223.476 )
+scale = Vector2( 1.14526, 0.385851 )
+normal = ExtResource( 21 )
+
+[node name="touch_howto" type="TouchScreenButton" parent="HUD_TOUCH_MENU"]
+modulate = Color( 1, 1, 1, 0.392157 )
+position = Vector2( 411.037, 309.96 )
+scale = Vector2( 2.38475, 0.357946 )
+normal = ExtResource( 21 )
+
+[node name="touch_credits" type="TouchScreenButton" parent="HUD_TOUCH_MENU"]
+modulate = Color( 1, 1, 1, 0.392157 )
+position = Vector2( 472.037, 384.749 )
+scale = Vector2( 1.85442, 0.374668 )
+normal = ExtResource( 21 )
+
+[node name="touch_exit" type="TouchScreenButton" parent="HUD_TOUCH_MENU"]
+modulate = Color( 1, 1, 1, 0.392157 )
+position = Vector2( 536.936, 459.811 )
+scale = Vector2( 1.00614, 0.345014 )
+normal = ExtResource( 21 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 638.75, 358.624 )
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 22 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
+autoplay = true
+
+[node name="fisfpha" parent="." instance=ExtResource( 24 )]
+modulate = Color( 0.847059, 0.196078, 0.560784, 1 )
+position = Vector2( 1209.3, 718.082 )
+
+[node name="fisfpha2" parent="." instance=ExtResource( 24 )]
+modulate = Color( 0.847059, 0.196078, 0.560784, 1 )
+position = Vector2( 1120.68, 731.051 )
+
+[node name="fisfpha3" parent="." instance=ExtResource( 24 )]
+modulate = Color( 0.847059, 0.196078, 0.560784, 1 )
+position = Vector2( 1257.93, 623.52 )
+
+[node name="fisfpha4" parent="." instance=ExtResource( 24 )]
+modulate = Color( 0.847059, 0.196078, 0.560784, 1 )
+position = Vector2( 1218.48, 773.199 )
+
+[node name="fisfpha5" parent="." instance=ExtResource( 24 )]
+modulate = Color( 0.847059, 0.196078, 0.560784, 1 )
+position = Vector2( 665.796, 782.04 )
+
+[node name="fisfpha6" parent="." instance=ExtResource( 24 )]
+modulate = Color( 0.847059, 0.196078, 0.560784, 1 )
+position = Vector2( 958.769, 753.156 )
+
+[node name="fisfpha7" parent="." instance=ExtResource( 24 )]
+modulate = Color( 0.847059, 0.196078, 0.560784, 1 )
+position = Vector2( 469.406, 811.612 )
+
+[node name="fisfpha8" parent="." instance=ExtResource( 24 )]
+modulate = Color( 0.847059, 0.196078, 0.560784, 1 )
+position = Vector2( 1347.92, 449.183 )
+
+[node name="fisfpha9" parent="." instance=ExtResource( 24 )]
+modulate = Color( 0.847059, 0.196078, 0.560784, 1 )
+position = Vector2( 788.41, 876.749 )
+
+[node name="fisfpha10" parent="." instance=ExtResource( 24 )]
+modulate = Color( 0.847059, 0.196078, 0.560784, 1 )
+position = Vector2( 1341.24, 255.443 )
+
+[node name="fisfpha11" parent="." instance=ExtResource( 24 )]
+modulate = Color( 0.847059, 0.196078, 0.560784, 1 )
+position = Vector2( 1045.09, 742.755 )
+
+[node name="fisfpha12" parent="." instance=ExtResource( 24 )]
+modulate = Color( 0.847059, 0.196078, 0.560784, 1 )
+position = Vector2( 1322.87, 572.777 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 537.547
+margin_top = 187.672
+margin_right = 737.547
+margin_bottom = 302.672
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_shadow = Color( 0.686275, 0, 0.678431, 1 )
+custom_constants/shadow_offset_x = 4
+text = "PLAY"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 397.945
+margin_top = 273.787
+margin_right = 895.945
+margin_bottom = 388.787
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_shadow = Color( 0.898039, 0.854902, 0.172549, 1 )
+custom_constants/shadow_offset_x = 4
+text = "how to play"
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 478.193
+margin_top = 348.432
+margin_right = 826.193
+margin_bottom = 463.432
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_shadow = Color( 0, 0.027451, 0.686275, 1 )
+custom_constants/shadow_offset_x = 4
+text = "credits"
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 541.741
+margin_top = 423.154
+margin_right = 741.741
+margin_bottom = 538.154
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color_shadow = Color( 0.686275, 0, 0, 1 )
+custom_constants/shadow_offset_x = 4
+text = "exit"
+[connection signal="pressed" from="HUD_TOUCH_MENU/touch_play" to="." method="_on_touch_play_pressed"]
+[connection signal="pressed" from="HUD_TOUCH_MENU/touch_howto" to="." method="_on_touch_howto_pressed"]
+[connection signal="pressed" from="HUD_TOUCH_MENU/touch_credits" to="." method="_on_touch_credits_pressed"]
+[connection signal="pressed" from="HUD_TOUCH_MENU/touch_exit" to="." method="_on_touch_exit_pressed"]

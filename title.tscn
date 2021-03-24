@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://title.gd" type="Script" id=1]
+[ext_resource path="res://art/map1.png" type="Texture" id=2]
+[ext_resource path="res://art/70935528_471230733725013_9162578853544067072_n.jpg" type="Texture" id=3]
+
+[node name="title" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="map1" type="Sprite" parent="."]
+position = Vector2( 623.757, 407.951 )
+scale = Vector2( 7.62076, 5.59769 )
+texture = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 616.296, 336.541 )
+scale = Vector2( 0.710685, 0.710685 )
+texture = ExtResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.3
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

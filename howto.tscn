@@ -1,0 +1,139 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://howto.gd" type="Script" id=1]
+[ext_resource path="res://art/h1.png" type="Texture" id=2]
+[ext_resource path="res://art/h2.png" type="Texture" id=3]
+[ext_resource path="res://art/h3.png" type="Texture" id=4]
+[ext_resource path="res://art/h4.png" type="Texture" id=5]
+[ext_resource path="res://art/black80.png" type="Texture" id=6]
+[ext_resource path="res://art/map1.png" type="Texture" id=7]
+[ext_resource path="res://fonts/ZF#2ndPixelus.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://sound/sfx_menu_move4.wav" type="AudioStream" id=9]
+[ext_resource path="res://sound/song_rooftop.ogg" type="AudioStream" id=10]
+[ext_resource path="res://art/HUD/right_pressed.png" type="Texture" id=11]
+[ext_resource path="res://art/HUD/left_pressed.png" type="Texture" id=12]
+[ext_resource path="res://art/HUD/right_up.png" type="Texture" id=13]
+[ext_resource path="res://art/HUD/shoot_pressed.png" type="Texture" id=14]
+[ext_resource path="res://art/HUD/up_pressed.png" type="Texture" id=15]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+size = 80
+font_data = ExtResource( 8 )
+
+[node name="howto" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 665.737, 364.964 )
+scale = Vector2( 1.46268, 1.46268 )
+frames = SubResource( 1 )
+speed_scale = 2.0
+playing = true
+flip_h = true
+
+[node name="black80" type="Sprite" parent="."]
+position = Vector2( 629.148, 353.87 )
+scale = Vector2( 1.12514, 1.12514 )
+texture = ExtResource( 6 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+modulate = Color( 1, 1, 1, 0.686275 )
+position = Vector2( 1114.08, 4.29592 )
+scale = Vector2( 0.838128, 0.401886 )
+normal = ExtResource( 7 )
+
+[node name="Label6" type="Label" parent="."]
+margin_left = 1121.92
+margin_top = -12.5559
+margin_right = 1619.92
+margin_bottom = 102.444
+rect_scale = Vector2( 1.24716, 1.24716 )
+custom_fonts/font = SubResource( 2 )
+text = "EXIT"
+
+[node name="button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 460.348
+margin_top = 94.8418
+margin_right = 958.348
+margin_bottom = 209.842
+rect_scale = Vector2( 0.946377, 0.946377 )
+custom_fonts/font = SubResource( 2 )
+text = "HOW TO PLAY"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 330.219
+margin_top = 271.433
+margin_right = 828.219
+margin_bottom = 386.433
+rect_scale = Vector2( 0.698463, 0.698463 )
+custom_fonts/font = SubResource( 2 )
+text = "ปุ่ม \"เดินหน้า\""
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 328.881
+margin_top = 451.438
+margin_right = 826.881
+margin_bottom = 566.438
+rect_scale = Vector2( 0.698463, 0.698463 )
+custom_fonts/font = SubResource( 2 )
+text = "ปุ่ม \"	กระโดด\""
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 817.432
+margin_top = 272.871
+margin_right = 1315.43
+margin_bottom = 387.871
+rect_scale = Vector2( 0.698463, 0.698463 )
+custom_fonts/font = SubResource( 2 )
+text = "ปุ่ม \"	ถอยหลัง\""
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 822.24
+margin_top = 449.047
+margin_right = 1320.24
+margin_bottom = 564.047
+rect_scale = Vector2( 0.698463, 0.698463 )
+custom_fonts/font = SubResource( 2 )
+text = "ปุ่ม \"	โจมตี\""
+
+[node name="right_pressed" type="Sprite" parent="."]
+position = Vector2( 259.869, 303.013 )
+scale = Vector2( 0.09, 0.09 )
+texture = ExtResource( 11 )
+
+[node name="left_pressed" type="Sprite" parent="."]
+position = Vector2( 750.947, 305.064 )
+scale = Vector2( 0.09, 0.09 )
+texture = ExtResource( 12 )
+
+[node name="right_up" type="Sprite" parent="."]
+visible = false
+position = Vector2( 267.008, 479.728 )
+scale = Vector2( 0.09, 0.09 )
+texture = ExtResource( 13 )
+
+[node name="shoot_pressed" type="Sprite" parent="."]
+position = Vector2( 755.034, 481.121 )
+scale = Vector2( 0.16236, 0.16236 )
+texture = ExtResource( 14 )
+
+[node name="up_pressed" type="Sprite" parent="."]
+position = Vector2( 267.492, 480.347 )
+scale = Vector2( 0.0896396, 0.0896396 )
+texture = ExtResource( 15 )
+[connection signal="pressed" from="TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]

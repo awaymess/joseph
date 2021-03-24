@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://sprites/rain.png" type="Texture" id=1]
+[ext_resource path="res://rain.gd" type="Script" id=2]
+[ext_resource path="res://sprites/rain.ogg" type="AudioStream" id=3]
+
+[node name="CPUParticles2D" type="CPUParticles2D"]
+amount = 400
+lifetime = 1.75
+texture = ExtResource( 1 )
+emission_shape = 2
+emission_rect_extents = Vector2( 200, 1 )
+gravity = Vector2( -90, 500 )
+angle = -15.0
+scale_amount = 0.2
+script = ExtResource( 2 )
+
+[node name="rain" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -15.0
